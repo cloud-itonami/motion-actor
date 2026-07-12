@@ -1,5 +1,5 @@
 (ns motion.generate
-  "Pure candidate builder for one co-scientist round (ADR-2607122400 §2/§3).
+  "Pure candidate builder for one co-scientist round (ADR-2607123000 §2/§3).
 
   Same 'closed hypothesis pool, no LLM in Generation' discipline
   cloud_murakumo.cosci uses: a small enumerable gene pool of
