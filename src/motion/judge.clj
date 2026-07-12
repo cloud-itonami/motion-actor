@@ -9,7 +9,7 @@
   motion-clip-generation PROMPT TEXT for persona-fit and descriptive
   quality, not the actual clip/joint-motion the generation job produced. A
   real perceptual judge (motion-quality model, a vision-capable critique
-  call over a rendered preview) is follow-up work — see ADR-2607122200
+  call over a rendered preview) is follow-up work — see ADR-2607122400
   Consequences."
   (:require [cheshire.core :as json]
             [clojure.string :as str])
