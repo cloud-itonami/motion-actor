@@ -1,0 +1,1 @@
+1b6a8f1a-7e05-433c-8546-97f324d9c552 bucket=gftdcojp-m365-annex chunk=50MiB datacenter=US encryption=none fileprefix=gftd-motion-actor/ host=s3.us-west-004.backblazeb2.com name=b2 port=443 protocol=https signature=v4 storageclass=STANDARD type=S3 timestamp=1786537549s
