@@ -3,7 +3,7 @@
   Mirrors `cloud_itonami.media.publish`'s shape (never re-validates what the
   governor already checked; refuses to publish anything the governor held —
   callers only reach this ns after motion.governor/ok? is true)."
-  (:require [cheshire.core :as json]
+  (:require [json.compat :as json]
             [motion.cacao :as cacao]
             [motion.aozora :as aozora]
             [motion.publisher :as pub-proto]))
