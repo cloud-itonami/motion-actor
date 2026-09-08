@@ -9,7 +9,7 @@
   exploration across the pool happens by round number advancing
   (motion.loop) and by biasing one gene slot toward the previous round's
   elite (motion.cosci/evolve-round)."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (def gene-pool
   {:clip-type ["idle stance" "casual walk cycle" "brisk run cycle"
