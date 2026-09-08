@@ -1,5 +1,5 @@
 (ns motion.cacao
-  "Agent-side CACAO issuance (JVM) for gftd-motion-actor. 1:1 port of the
+  "Agent-side CACAO issuance (JVM) for motion-actor. 1:1 port of the
   PROVEN `cloud_itonami.media.cacao` (itself ported from `kawaraban.cacao` /
   `tashikame.cacao` / `kotoba.cacao`) — deliberately NOT built on
   `io.github.kotoba-lang/org-chainagnostic-cacao`, since this SIWE+CBOR
@@ -139,7 +139,7 @@
   (graph-cid-from-name (str "kotobase/db/" did "/" db-name)))
 
 (def default-db-name
-  "gftd-motion-actor's own database."
+  "motion-actor's own database."
   "motion")
 
 (defn generate-identity []

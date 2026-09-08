@@ -24,7 +24,7 @@
   )
 
 (def modality :motion)
-(def actor-id "gftd-motion-actor")
+(def actor-id "motion-actor")
 
 (defn function
   "This actor's murakumo.edn `:apps :generation` function entry (SSoT stays

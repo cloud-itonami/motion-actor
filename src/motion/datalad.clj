@@ -34,12 +34,12 @@
    :asset/kind kind
    :asset/format format
    :asset/title title
-   :asset/author "gftd-motion-actor"
+   :asset/author "motion-actor"
    :asset/license license
    :asset/tags (vec tags)
    :asset/source :gen
    :asset/gen {:stage :motion :job-key gen-job-id :prompt prompt
-               :provenance "murakumo/skeleton via gftd-motion-actor co-scientist loop"}
+               :provenance "murakumo/skeleton via motion-actor co-scientist loop"}
    :asset/created created})
 
 (defn write-asset!
