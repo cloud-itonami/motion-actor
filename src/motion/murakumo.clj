@@ -17,12 +17,11 @@
   text-to-motion synthesis (see murakumo.edn's `:motion` function `:note`).
   It IS still prompt/param-driven like illust's image engine, so this ns's
   submit!/poll/fetch-artifact! shape is unchanged from the reference."
-  (:require [cloud-murakumo.spec :as spec]
+  (:require [kotoba.net.jvm-host :as jvm-host]
+            [cloud-murakumo.spec :as spec]
             [cloud-murakumo.gen :as gen]
             [cloud-murakumo.queue-kotoba :as qk])
-  (:import [java.net URI]
-           [java.net.http HttpClient HttpRequest HttpResponse$BodyHandlers]
-           [java.time Duration]))
+  )
 
 (def modality :motion)
 (def actor-id "gftd-motion-actor")
@@ -85,14 +84,12 @@
 
 (defn jvm-http-get
   "Plain GET, returns {:status :body-bytes}. Used for both http(s) artifact
-  URLs and the kotoba CID gateway fallback below."
+  URLs and the kotoba CID gateway fallback below. Delegated to
+  kotoba.net.jvm-host (:as-bytes)."
   [url]
-  (let [req (-> (HttpRequest/newBuilder (URI/create url))
-                (.timeout (Duration/ofSeconds 120))
-                (.GET)
-                .build)
-        resp (.send (HttpClient/newHttpClient) req (HttpResponse$BodyHandlers/ofByteArray))]
-    {:status (.statusCode resp) :body-bytes (.body resp)}))
+  (let [resp ((jvm-host/http-transport {:timeout-seconds 120 :as-bytes true})
+              {:url url :method :get})]
+    {:status (:status resp) :body-bytes (:body resp)}))
 
 (defn artifact-url
   "One `:gen.job/artifacts` entry -> a fetchable URL. If it's already an
