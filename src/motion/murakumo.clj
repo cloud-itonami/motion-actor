@@ -10,7 +10,7 @@
   murakumo fleet worker (`clojure -M:worker --kotoba-url https://kotobase.net
   --kotoba-graph gftd-murakumo`, running on a Mac-mini / `gad` node) has to be
   up and consuming that queue for jobs to ever leave :queued. Same
-  operational dependency ai-gftd-apex already has on cloud-murakumo.
+  operational dependency apex already has on cloud-murakumo.
 
   The `:motion` modality's engine is `:skeleton` — a Mac-mini CPU worker
   producing validated idle/walk/dance/gesture EDN clips, not CUDA
