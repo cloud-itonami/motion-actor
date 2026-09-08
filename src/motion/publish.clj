@@ -12,13 +12,13 @@
 
 (defn load-or-create-identity! [] (cacao/load-or-create-identity! identity-path))
 
-(def display-name "gftd-motion-actor — マイ")
+(def display-name "motion-actor — マイ")
 
 (def description
   (str "💃 AI-GENERATED motion clips for network-isekai, produced by a "
        "co-scientist-style generation loop over the murakumo fleet, gated by "
        "an independent AssetGovernor before anything is published. Every "
-       "asset here is free (:cc0/:cc-by) — github.com/gftdcojp/gftd-motion-actor"))
+       "asset here is free (:cc0/:cc-by) — github.com/cloud-itonami/motion-actor"))
 
 (defn json-opts []
   {:json-write json/generate-string
